@@ -1,0 +1,58 @@
+{
+  "plugin_slug": "nsc_ics_settings",
+  "plugin_name": "ITP Cookie Saver",
+  "plugin_prefix": "nsc_ics_",
+  "setting_page_fields": {
+    "active_tab_slug": "",
+    "active_tab_index": 0,
+    "tabs": [
+      {
+        "tabname": "General",
+        "tab_slug": "general",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "activate",
+            "type": "checkbox",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": false,
+            "helpertext": "As soon as you activate this plugin, the specified cookies will be saved in the backend again.",
+            "name": "Activate Cookie Saver",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookienames",
+            "type": "text",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "_ga",
+            "helpertext": "comma separated list of cookie names. They will be written by the backend again, with an expiry date of two years.",
+            "name": "Cookie Names",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookiedomain",
+            "type": "text",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "",
+            "helpertext": "If empty it will save the cookie to the same Domain where this Blog is installed. HINT: If you do not know what to do here, it is best to leave it empty.",
+            "name": "Cookie Domain to write saved cookie",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "beforeunload",
+            "type": "checkbox",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": false,
+            "helpertext": "Before the user leaves your side it will sent an additional request in the background to make sure, the server was the last to touch the cookie. This makes it very save, but is a bit more performance needy.",
+            "name": "Additional save before unload",
+            "save_in_db": true
+          }
+        ]
+      }
+    ]
+  }
+}
